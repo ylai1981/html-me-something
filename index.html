@@ -4,13 +4,28 @@
 
 <head>
    <title>Ylai's Musings</title>
+   <link rel="stylesheet" href="styles.css">
+   <script>
+      function myFunction(imgs) {
+         // Get the expanded image
+         var expandImg = document.getElementById("expandedImg");
+         // Get the image text
+         var imgText = document.getElementById("imgtext");
+         // Use the same src in the expanded image as the image being clicked on from the grid
+         expandImg.src = imgs.src;
+         // Use the value of the alt attribute of the clickable image as text inside the expanded image
+         imgText.innerHTML = imgs.alt;
+         // Show the container element (hidden with CSS)
+         expandImg.parentElement.style.display = "block";
+} 
+   </script>
 </head>
 
 <body>
    <main>
       <div>
          <header>
-            <h3>My Family's Travel Adventures in Different Countries</h3>
+            <h3 id="blogTitle">My Family's Travel Adventures in Different Countries</h3>
             <p>Stepping out from one's comfort zone can be liberating. It builds your resilience, objectiveness and
             tolerance. It allows you to be accepting of cultural differences. It builds your character in a way only
             experiences can.  Living in different countries for a period of time gives you that experience.  You get to experience life as a local rather than as a tourist.  You get to see both the good side and the bad side (which so far has not really been worst than a few inconveniences) of living as a local.</p>
@@ -36,14 +51,30 @@
             There was also a free language learning center that caters to adults who wants to learn the Japanese language.
             The high regard I have for Japan was brought about our experience in their country.
             </p>
-            <figure>
-               <img src="images/japan_001.jpg" alt="kids in sakura" width=400>
-               <figcaption>The girls enjoying their first Sakura experience.</figcaption>
-               <img src="images/japan_002.jpg" alt="dad and kids in sanrio" width=250>
-               <figcaption>The girls in Sanrio Puroland</figcaption>
-               <img src="images/japan_003.jpg" alt="mom and kids in disney" width=350>
-               <figcaption>The girls in Tokyo Disneyland</figcaption>
-            </figure>
+            <!-- thumbnail images in Japan -->
+            <div class="row">
+               <div class="column">
+                  <img src="images/japan_001.jpg" alt="The girls first Sakura experience" style="width:100%" onclick="myFunction(this);">
+               </div>
+               <div class="column">
+                  <img src="images/japan_002.jpg" alt="The girls first Ski and Snow experience" style="width:100%" onclick="myFunction(this);">
+               </div>
+               <div class="column">
+                  <img src="images/japan_003.jpg" alt="The girls first Tokyo Disneyland experience" style="width:100%" onclick="myFunction(this);">
+               </div>
+               <div class="column">
+                  <img src="images/japan_004.jpg" alt="The girls first Strawberry picking experience" style="width:100%" onclick="myFunction(this);">
+               </div>
+            </div>
+            <!-- the expanded image -->
+            <div class="container">
+               <!-- to close the image -->
+               <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+               <!-- expanded image -->
+               <img id="expandedImg" style="width:75%">
+               <!-- image text -->
+               <div id="imgtext"></div>
+            </div>
          </section>
          <section>
             <a name="kl"></a>
@@ -55,14 +86,31 @@
             medium of
             instruction. Private school on the other hand is not an option ($$$). While Malaysia served as a good ground
             for my husband to grow in his career, I didn't find it conducive for raising a family (especially when
-            you're a foreigner who don't want to pay $$$ for good education).
+            you're a foreigner who don't want to pay $$$ for education).
             </p>
-            <figure> 
-               <img src="images/KL_001.jpg" alt="kids in sakura" width=250>
-               <figcaption>Weekend at Sunway Lagoon</figcaption>
-               <img src="images/kl_003.jpg" alt="mom and kids in disney" width=350>
-               <figcaption>Posing with the birds at Kuala Lumpur Bird Park</figcaption>
-            </figure>
+            <div class="row"> 
+               <div class="column">
+                  <img src="images/kl_001.jpg" alt="Family bonding at KL Bird Park" style="width:100%" onclick="myFunction(this);">
+               </div>
+               <div class="column">
+                  <img src="images/kl_002.jpg" alt="Family bonding at Sunway Lagoon" style="width:100%" onclick="myFunction(this);">
+               </div>
+               <div class="column">
+                  <img src="images/kl_003.jpg" alt="Family bonding at Legoland Malaysia" style="width:100%" onclick="myFunction(this);">
+               </div>
+               <div class="column">
+                  <img src="images/kl_004.jpg" alt="The girls' surprise for their dad's birthday" style="width:100%" onclick="myFunction(this);">
+               </div>
+            </div>
+            <!-- the expanded image -->
+            <div class="container">
+               <!-- to close the image -->
+               <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+               <!-- expanded image -->
+               <img id="expandedImg" style="width:75%">
+               <!-- image text -->
+               <div id="imgtext"></div>
+            </div>
          </section>  
          <section>
             <a name="tampa"></a>
@@ -77,14 +125,29 @@
             couldn't be more grateful to be part of the program and I am positive that this will launch me into a great
             career in software development. 
             </p>
-            <figure>
-               <img src="images/us_001.jpg" alt="kids in sakura" width=350>
-               <figcaption>Beach day at Pier 60, Clearwater Florida</figcaption>
-               <img src="images/us_002.jpg" alt="dad and kids in sanrio" width=350>
-               <figcaption>At our favorite sushi restaurant in ChampionsGate (Blue Coast Asian Cuisine)</figcaption>
-               <img src="images/us_003.jpg" alt="mom and kids in disney" width=300>
-               <figcaption>Christmas holiday in Williamsburg, Iowa</figcaption>
-            </figure>
+            <div class="row">
+               <div class="column">
+                  <img src="images/us_001.jpg" alt="The White House (Washington DC)" style="width:100%" onclick="myFunction(this);">
+               </div>
+               <div class="column">
+                  <img src="images/us_002.jpg" alt="Lincoln Memorial (Washington DC)" style="width:100%" onclick="myFunction(this);" >
+               </div>
+               <div class="column">
+                  <img src="images/us_003.jpg" alt="Pier 60 (Clearwater, FL)" style="width:100%" onclick="myFunction(this);">
+               </div>
+               <div class="column">
+                  <img src="images/us_004.jpg" alt="Pier 60 (Clearwater, FL)" style="width:130%" onclick="myFunction(this);">
+               </div>
+            </div>
+            <!-- the expanded image -->
+            <div class="container">
+               <!-- to close the image -->
+               <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+               <!-- expanded image -->
+               <img id="expandedImg" style="width:75%">
+               <!-- image text -->
+               <div id="imgtext"></div>
+            </div>
          </section> 
       </div>
    </main>
