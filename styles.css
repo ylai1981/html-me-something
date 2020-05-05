@@ -1,17 +1,61 @@
+
+.intro {
+    padding: 25px 50px 25px 50px;
+    text-align: justify;
+}
+
+p.text {
+    text-align: justify;
+    padding: 10px 30px 10px 30px;
+}
+
 body {
     background-color: antiquewhite;
     color: slategray;
-    margin: 25px 50px 75px 50px;
+    margin: 25px 50px 50px 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
+
 }
 
 #blogTitle {
-    padding: 25px 50px 75px 50px; 
-    text-align: center;    
+    margin: 25px 50px 25px 50px;    
+    padding: 25px 50px 25px 50px; 
+    text-align: center;   
+    text-shadow: 2px 2px 5px darkslategray;
+    
 }
 
-footer {
+#countryName {
     text-align: center;
-    padding: 25px 50px 25px 50px;
+    text-decoration: underline;
+    text-shadow: 2px 2px 5px darkslategray;
+}
+.country {
+    margin-top: 25px;
+    padding: 15px 25px 15px 25px;    
+}
+
+.country1 {
+    background-color: rgb(228, 217, 203);
+    border: 2px solid rgb(228, 217, 203);
+    border-radius: 5px;
+}
+
+.country2 {
+    background-color: rgb(228, 217, 203);
+    border: 2px solid rgb(228, 217, 203);
+    border-radius: 5px;
+}
+
+.country3 {
+    background-color: rgb(228, 217, 203);
+    border: 2px solid rgb(228, 217, 203);
+    border-radius: 5px;
+}
+ 
+  footer {
+    text-align: center;
+    padding: 100px 50px 25px 50px;
     color: darkgrey;
 }
 
@@ -19,7 +63,7 @@ footer {
 .column {
     float: left;
     width: 20%;
-    padding: 10px;
+    padding: 20px 0px 10px 50px;
   }
   
   /* Style the images inside the grid */
@@ -30,12 +74,14 @@ footer {
   .column img:hover {
     opacity: 1;
   }
+
   
   /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
+    ;
   }  
 
   /* The expanding image container (positioning is needed to position the close button and the text) */
@@ -43,13 +89,15 @@ footer {
     position: relative;
     display: none;
   }
+
+
   
   /* Expanding image text */
   #imgtext {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    color: white;
+    color:goldenrod;
     font-size: 20px;
   }
   
@@ -58,8 +106,7 @@ footer {
     position: absolute;
     top: 10px;
     right: 15px;
-    color: white;
+    color: goldenrod;
     font-size: 35px;
     cursor: pointer;
-  }
-
+  } 
