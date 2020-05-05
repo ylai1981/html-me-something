@@ -6,12 +6,11 @@
    <title>Ylai's Musings</title>
    <link rel="stylesheet" href="styles.css">
    <script>
-      function enlargeImg(img) {
-         
+      function enlargeImg(img, id) {
             // Get the expanded image
-            var expandImg = document.getElementById("expandedImg");
+            var expandImg = document.getElementById("expandedImg"+id);
             // Get the image text
-            var imgText = document.getElementById("imgtext");
+            var imgText = document.getElementById("imgtext"+id);
             // Use the same src in the expanded image as the image being clicked on from the grid
             expandImg.src = img.src;
             // Use the value of the alt attribute of the clickable image as text inside the expanded image
@@ -59,16 +58,16 @@
                <!-- thumbnail images in Japan -->
                <div class="row">
                   <div class="column">
-                     <img src="images/japan_001.jpg" alt="The girls first Sakura experience" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/japan_001.jpg" alt="The girls first Sakura experience" style="width:100%" onclick="enlargeImg(this,1);">
                   </div>
                   <div class="column">
-                     <img src="images/japan_002.jpg" alt="The girls first Ski and Snow experience" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/japan_002.jpg" alt="The girls first Ski and Snow experience" style="width:100%" onclick="enlargeImg(this,1);">
                   </div>
                   <div class="column">
-                     <img src="images/japan_003.jpg" alt="The girls first Tokyo Disneyland experience" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/japan_003.jpg" alt="The girls first Tokyo Disneyland experience" style="width:100%" onclick="enlargeImg(this,1);">
                   </div>
                   <div class="column">
-                     <img src="images/japan_004.jpg" alt="The girls first Strawberry picking experience" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/japan_004.jpg" alt="The girls first Strawberry picking experience" style="width:100%" onclick="enlargeImg(this,1);">
                   </div>
                </div>
             </div>
@@ -77,9 +76,9 @@
                <!-- to close the image -->
                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                <!-- expanded image -->
-               <img id="expandedImg" style="width:75%">
+               <img id="expandedImg1" style="width:75%">
                <!-- image text -->
-                <div id="imgtext"></div>
+                <div id="imgtext1"></div>
             </div>
             
          </section> 
@@ -98,18 +97,28 @@
                </p>
                <div class="row"> 
                   <div class="column">
-                     <img src="images/kl_001.jpg" alt="Family bonding at KL Bird Park" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/kl_001.jpg" alt="Family bonding at KL Bird Park" style="width:100%" onclick="enlargeImg(this,2);">
                   </div>
                   <div class="column">
-                     <img src="images/kl_002.jpg" alt="Family bonding at Sunway Lagoon" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/kl_002.jpg" alt="Family bonding at Sunway Lagoon" style="width:100%" onclick="enlargeImg(this,2);">
                   </div>
                   <div class="column">
-                     <img src="images/kl_003.jpg" alt="Family bonding at Legoland Malaysia" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/kl_003.jpg" alt="Family bonding at Legoland Malaysia" style="width:100%" onclick="enlargeImg(this,2);">
                   </div>
                   <div class="column">
-                     <img src="images/kl_004.jpg" alt="The girls' surprise for their dad's birthday" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/kl_004.jpg" alt="The girls' surprise for their dad's birthday" style="width:100%" onclick="enlargeImg(this,2);">
                   </div>
                </div>
+            </div>
+
+            <!-- the expanded image -->
+            <div class="container">
+               <!-- to close the image -->
+               <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+               <!-- expanded image -->
+               <img id="expandedImg2" style="width:75%">
+               <!-- image text -->
+                <div id="imgtext2"></div>
             </div>
             
          
@@ -132,20 +141,29 @@
                </p>
                <div class="row">
                   <div class="column">
-                     <img src="images/us_001.jpg" alt="The White House (Washington DC)" style="width:75%" onclick="enlargeImg(this);">
+                     <img src="images/us_001.jpg" alt="The White House (Washington DC)" style="width:75%" onclick="enlargeImg(this,3);">
                   </div>
                   <div class="column">
-                     <img src="images/us_002.jpg" alt="Lincoln Memorial (Washington DC)" style="width:60%" onclick="enlargeImg(this);" >
+                     <img src="images/us_002.jpg" alt="Lincoln Memorial (Washington DC)" style="width:60%" onclick="enlargeImg(this,3);" >
                   </div>
                   <div class="column">
-                     <img src="images/us_003.jpg" alt="Pier 60 (Clearwater, FL)" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/us_003.jpg" alt="Pier 60 (Clearwater, FL)" style="width:100%" onclick="enlargeImg(this,3);">
                   </div>
                   <div class="column">
-                     <img src="images/us_004.jpg" alt="Pier 60 (Clearwater, FL)" style="width:100%" onclick="enlargeImg(this);">
+                     <img src="images/us_004.jpg" alt="Pier 60 (Clearwater, FL)" style="width:100%" onclick="enlargeImg(this,3);">
                   </div>
                </div>
             </div>
             
+            <!-- the expanded image -->
+            <div class="container">
+               <!-- to close the image -->
+               <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+               <!-- expanded image -->
+               <img id="expandedImg3" style="width:75%">
+               <!-- image text -->
+                <div id="imgtext3"></div>
+            </div>
          </section> 
 
          
